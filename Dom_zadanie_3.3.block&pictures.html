@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+        }
+        div {
+            border: 4px solid green;
+            width: 450px;
+            margin: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section id="mainBox">
+        <!-- <div>
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+        </div> -->
+    </section>
+    <script>
+        let div = +prompt ("Введите количество блоков: ");
+        let pic = +prompt ("Введите количество картинок: ");
+        
+        // if (pic >=1 && pic <= 11) {
+            let divCount = "";
+            
+        for (i = 1; i <= div; i++) {
+            divCount += "<div>";
+                let picMax = 1;
+                for (j = 1; j <= pic; j++) {
+                    if (picMax > 11) {
+                        picMax = 1;
+                    }
+                    divCount += `<img src="images/${picMax++}.jpg" alt="">`
+                }
+                divCount += "</div>";
+        }
+        mainBox.innerHTML = divCount;
+        // } else {
+        //     alert ("Неверный номер картинки")
+        // }
+        
+    </script>
+
+</body>
+</html>
